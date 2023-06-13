@@ -28,7 +28,7 @@
                     return;
                 }
                 $scope.widgetData = pagedTotalData.fieldRows[0][$scope.config.customModuleField].value;
-                if ('data' in $scope.widgetData) {
+                if ($scope.widgetData.hasOwnProperty('data')) {
                     $scope.sizeType = 'large';
                 }
                 else {
