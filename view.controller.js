@@ -4,18 +4,27 @@
         .module('cybersponse')
         .controller('situationalAwarenessWidget100Ctrl', situationalAwarenessWidget100Ctrl);
 
-    situationalAwarenessWidget100Ctrl.$inject = ['$scope', 'PagedCollection'];
+    situationalAwarenessWidget100Ctrl.$inject = ['$scope', 'PagedCollection', '$rootScope'];
 
-    function situationalAwarenessWidget100Ctrl($scope, PagedCollection) {
+    function situationalAwarenessWidget100Ctrl($scope, PagedCollection, $rootScope) {
 
         $scope.widgetData = {};
         $scope.sizeType = '';
-
         init();
+        $scope.filterValidation = false;
+        var recordNotFound = "Reocrd not found";
+        var incorrectJson = "Incorrect Json";
+
         function init() {
+            $scope.currentTheme = $rootScope.theme.id;
+            if ($scope.currentTheme === 'light') {
+                var textElements = document.getElementsByName("situationalCardValue");
+                for (var i = 0; i < textElements.length; i++) {
+                    textElements[i].style.color = '#151515';
+                }
+            }
             fetchJsonData();
         }
-
 
         function fetchJsonData() {
             var filters = {
@@ -25,14 +34,29 @@
             pagedTotalData.loadByPost(filters).then(function () {
                 if (pagedTotalData.fieldRows.length === 0) {
                     $scope.filterValidation = true;
+                    $scope.errorMessage =  recordNotFound;
                     return;
                 }
-                $scope.widgetData = pagedTotalData.fieldRows[0][$scope.config.customModuleField].value;
-                if ($scope.widgetData.hasOwnProperty('data')) {
-                    $scope.sizeType = 'large';
+                var data = pagedTotalData.fieldRows[0][$scope.config.customModuleField].value;
+                if ($scope.config.keyForCustomModule) {
+                    var nestedKeysArray = $scope.config.keyForCustomModule.split('.');
+                    nestedKeysArray.forEach(function (value) {
+                        data = data[value];
+                    })
                 }
-                else {
-                    $scope.sizeType = 'small';
+                if(data){
+                    $scope.widgetData = data;
+                    if ($scope.widgetData.hasOwnProperty('data')) {
+                        $scope.sizeType = 'large';
+                    }
+                    else {
+                        $scope.sizeType = 'small';
+                    }
+                }
+                else{
+                    $scope.filterValidation = true;
+                    $scope.errorMessage = incorrectJson;
+                    return;
                 }
             })
         }

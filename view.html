@@ -16,18 +16,18 @@
                 <div class="situationalCard">
                     <div class="situationalCardInnerDiv">
                     </div>
-                    <div id="situationalCardTitle" class="situationalCardTitle">
+                    <div id="situationalCardTitle" class="situationalCardTitle padding-bottom-0">
                         {{widgetData.title}}
                     </div>
-                    <div id="situationalCardValue" class="situationalCardValue">
+                    <div id="situationalCardValue" name="situationalCardValue" class="situationalCardValue">
                         {{widgetData.value}}
                     </div>
-                    <div class="padding-20  display-flex-space-between">
+                    <div class="padding-20 padding-top-md  display-flex-space-between">
                         <div data-ng-repeat="(key,value) in widgetData.data" >
                             <div class="largeBoxKey">
                                 {{key}}
                             </div>
-                            <div class="largeBoxValue">
+                            <div class="largeBoxValue" name="situationalCardValue">
                                 {{value}}
                             </div>
                         </div>
@@ -41,14 +41,14 @@
                         <div id="situationalCardTitle" class="situationalCardTitle padding-botton-20">
                             {{widgetData.title}}
                         </div>
-                        <div id="situationalCardValue" class="situationalCardSmallValue margin-top-20">
+                        <div id="situationalCardValue" name="situationalCardValue" class="situationalCardSmallValue margin-top-20">
                             {{widgetData.value}}
                         </div>
                     </div>
                 </div>
             </div>
             <div ng-if="filterValidation" class="chart-message">
-                <h6 class="text-center padding-top-md padding-bottom-md font200 font-size-15">Error: Either the JOSN format is incorrect or Record is not found.</h6>
+                <h6 class="text-center padding-top-md padding-bottom-md font200 font-size-15">Error: {{errorMessage}}.</h6>
             </div>
         </div>
     </div>

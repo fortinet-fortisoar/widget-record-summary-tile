@@ -55,8 +55,11 @@
             </div>
 
         </div>
-        <div class="alert-danger alert margin-bottom-xlg margin-top-md" data-ng-if="objectFields.length == 0">
-            <span>Select a module wich contains JSON field</span>
+        <div id='customModuleJsonValue'>
+            <label for="customModuleValue" class="control-label">Enter the key of object to be
+                rendered.</label>
+            <input name="customModuleValue" id="customModuleValue" type="text"
+                data-ng-model="config.keyForCustomModule" class="form-control" />
         </div>
     </div>
     <div class="modal-footer">
