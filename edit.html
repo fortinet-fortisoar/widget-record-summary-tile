@@ -1,13 +1,19 @@
-<form data-ng-submit="save()" class="noMargin" name="editSituationalAwarenessForm" data-ng-class="{'state-wait': processing }"
-    novalidate>
+<form data-ng-submit="save()" class="noMargin" name="editSituationalAwarenessForm"
+    data-ng-class="{'state-wait': processing }" novalidate>
     <div class="modal-header">
-        <h3 class="modal-title col-md-9">Hello World Edit View</h3>
+        <h3 class="modal-title col-md-9">Situational Awareness Edit View</h3>
         <button type="button" class="close" data-ng-click="cancel()" data-dismiss="modal" aria-label="Close"
             id="close-edit-widget-form-btn">
             <div aria-hidden="true" class="version-button">+</div>
         </button>
     </div>
     <div class="modal-body">
+        <div class="form-group"
+            data-ng-class="{ 'has-error': editFunnelWidgetForm.title.$invalid && editFunnelWidgetForm.title.$touched }">
+            <label for="title" class="control-label">Title<span class="text-danger">*</span></label> <input id="title"
+                name="title" type="text" data-ng-model="config.title" class="form-control" required />
+            <div data-cs-messages="editFunnelWidgetForm.title"></div>
+        </div>
         <!-- Select Module and Field -->
         <div class="form-group" data-ng-if="jsonObjModuleList"
             data-ng-class="{ 'has-error': editSituationalAwarenessForm.customModule.$invalid && editSituationalAwarenessForm.customModule.$touched }">
@@ -58,8 +64,8 @@
         <div id='customModuleJsonValue'>
             <label for="customModuleValue" class="control-label">Enter the key of object to be
                 rendered.</label>
-            <input name="customModuleValue" id="customModuleValue" type="text"
-                data-ng-model="config.keyForCustomModule" class="form-control" />
+            <input name="customModuleValue" id="customModuleValue" type="text" data-ng-model="config.keyForCustomModule"
+                class="form-control" />
         </div>
     </div>
     <div class="modal-footer">
