@@ -2,11 +2,11 @@
 (function () {
     angular
         .module('cybersponse')
-        .controller('editSituationalAwarenessWidget100Ctrl', editSituationalAwarenessWidget100Ctrl);
+        .controller('editRecordSummaryTile100Ctrl', editRecordSummaryTile100Ctrl);
 
-    editSituationalAwarenessWidget100Ctrl.$inject = ['$scope', '$uibModalInstance', 'config', 'appModulesService', 'Entity', 'modelMetadatasService'];
+    editRecordSummaryTile100Ctrl.$inject = ['$scope', '$uibModalInstance', 'config', 'appModulesService', 'Entity', 'modelMetadatasService'];
 
-    function editSituationalAwarenessWidget100Ctrl($scope, $uibModalInstance, config, appModulesService, Entity, modelMetadatasService) {
+    function editRecordSummaryTile100Ctrl($scope, $uibModalInstance, config, appModulesService, Entity, modelMetadatasService) {
         $scope.cancel = cancel;
         $scope.save = save;
         $scope.config = config;
@@ -57,9 +57,9 @@
         }
 
         function save() {
-            if ($scope.editSituationalAwarenessForm.$invalid) {
-                $scope.editSituationalAwarenessForm.$setTouched();
-                $scope.editSituationalAwarenessForm.$focusOnFirstError();
+            if ($scope.editRecordSummaryTile.$invalid) {
+                $scope.editRecordSummaryTile.$setTouched();
+                $scope.editRecordSummaryTile.$focusOnFirstError();
                 return;
               }
             $uibModalInstance.close($scope.config);

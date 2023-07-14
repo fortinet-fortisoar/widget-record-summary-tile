@@ -2,11 +2,11 @@
 (function () {
     angular
         .module('cybersponse')
-        .controller('situationalAwarenessWidget100Ctrl', situationalAwarenessWidget100Ctrl);
+        .controller('recordSummaryTile100Ctrl', recordSummaryTile100Ctrl);
 
-    situationalAwarenessWidget100Ctrl.$inject = ['$scope', 'PagedCollection', '$rootScope'];
+    recordSummaryTile100Ctrl.$inject = ['$scope', 'PagedCollection', '$rootScope'];
 
-    function situationalAwarenessWidget100Ctrl($scope, PagedCollection, $rootScope) {
+    function recordSummaryTile100Ctrl($scope, PagedCollection, $rootScope) {
 
         $scope.widgetData = {};
         $scope.sizeType = '';
@@ -46,6 +46,7 @@
                 }
                 if(data){
                     $scope.widgetData = data;
+                    //If data is found use large class
                     if ($scope.widgetData.hasOwnProperty('data')) {
                         $scope.sizeType = 'large';
                     }

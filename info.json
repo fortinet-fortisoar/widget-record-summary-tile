@@ -1,6 +1,6 @@
 {
-    "name": "situationalAwarenessWidget",
-    "title": "Situational Awareness Widget",
+    "name": "recordSummaryTile",
+    "title": "Record Summary Tile",
     "subTitle": "Widget lists, number of customers and Alerts",
     "version": "1.0.0",
     "metadata": {
@@ -11,9 +11,7 @@
         "certified": "No",
         "publisher": "Fortinet",
         "compatibility": [
-            "cyops"
-        ],
-        "standalone": false
-    },
-    "development": false
+            "7.3.1"
+        ]
+    }
 }

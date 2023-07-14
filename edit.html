@@ -1,7 +1,7 @@
-<form data-ng-submit="save()" class="noMargin" name="editSituationalAwarenessForm"
+<form data-ng-submit="save()" class="noMargin" name="editRecordSummaryTile"
     data-ng-class="{'state-wait': processing }" novalidate>
     <div class="modal-header">
-        <h3 class="modal-title col-md-9">Situational Awareness Edit View</h3>
+        <h3 class="modal-title col-md-9">Record Summary Tile Edit View</h3>
         <button type="button" class="close" data-ng-click="cancel()" data-dismiss="modal" aria-label="Close"
             id="close-edit-widget-form-btn">
             <div aria-hidden="true" class="version-button">+</div>
@@ -16,7 +16,7 @@
         </div>
         <!-- Select Module and Field -->
         <div class="form-group" data-ng-if="jsonObjModuleList"
-            data-ng-class="{ 'has-error': editSituationalAwarenessForm.customModule.$invalid && editSituationalAwarenessForm.customModule.$touched }">
+            data-ng-class="{ 'has-error': editRecordSummaryTile.customModule.$invalid && editRecordSummaryTile.customModule.$touched }">
             <label for="customModule" class="control-label">Data Source
                 <span class="text-danger">*</span>
             </label>
@@ -39,14 +39,14 @@
                     data-tooltip-append-to-body="true"><i class="icon icon-information font-Size-13"></i></span>
                 <div data-cs-conditional data-ng-if="fieldsArray.length > 0" data-fields="$parent.fields"
                     data-reset-field="$parent.fields" data-mode="'queryFilters'" data-ng-model="$parent.config.query"
-                    data-parent-form="editSituationalAwarenessForm"
+                    data-parent-form="editRecordSummaryTile"
                     data-enable-expression="(page==='dashboard' || page==='reporting')" data-show-uuid="true"
-                    data-form-name="'editSituationalAwarenessForm'">
+                    data-form-name="'editRecordSummaryTile'">
                 </div>
             </div>
 
             <div id="customModuleField"
-                data-ng-class="{ 'has-error': editSituationalAwarenessForm.customModuleField.$invalid && editSituationalAwarenessForm.customModuleField.$touched }">
+                data-ng-class="{ 'has-error': editRecordSummaryTile.customModuleField.$invalid && editRecordSummaryTile.customModuleField.$touched }">
                 <label class="control-label">Select Field
                     <span class="text-danger">*</span>
                 </label>
