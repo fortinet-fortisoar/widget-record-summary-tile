@@ -46,12 +46,12 @@ This can display data in 2 forms based on JSON provided:
     
     In the field, "Enter the key of object to be rendered" contains the main key of the object "recordTilesROI", if there is no key for the object leave the field blank.
     JSON Object which contains the data to be rendered:
-    ```JSON
+```JSON
     "recordTilesROI": {
       "title": "Overall Automation ROI",
       "value": "$113,122"
     }
-    ```
+```
     In this example the JSON has a key "title" and value, but no "data" key.
     So the tile will be displayed:
     
