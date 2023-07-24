@@ -16,7 +16,7 @@ This can display data in 2 forms based on JSON provided:
     In the field, "Enter the key of object to be rendered" contains the main key of the object "recordTilesCustomerData", if there is no key for the object leave the field blank.
 
     JSON Object which contains the data to be rendered:
-    ```JSON
+```JSON
     "recordTilesCustomerData": {
       "data": {
         "Gold": 4000,
@@ -26,7 +26,7 @@ This can display data in 2 forms based on JSON provided:
       "title": "Total Customers",
       "value": "12,000"
     }
-    ```
+```
     In this example the JSON has a key "data", "title" and value.
     
     "data" -  All the key, value pairs present in it would be rendered in the bottom section of the widget, 
