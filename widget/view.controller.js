@@ -4,26 +4,29 @@
         .module('cybersponse')
         .controller('recordSummaryTile100Ctrl', recordSummaryTile100Ctrl);
 
-    recordSummaryTile100Ctrl.$inject = ['$scope', 'PagedCollection', '$rootScope'];
+    recordSummaryTile100Ctrl.$inject = ['$scope', 'PagedCollection', '$rootScope', '$timeout'];
 
-    function recordSummaryTile100Ctrl($scope, PagedCollection, $rootScope) {
+    function recordSummaryTile100Ctrl($scope, PagedCollection, $rootScope, $timeout) {
 
         $scope.widgetData = {};
         $scope.sizeType = '';
         init();
         $scope.filterValidation = false;
-        var recordNotFound = "Reocrd not found";
+        var recordNotFound = "Record not found";
         var incorrectJson = "Incorrect Json";
 
         function init() {
             $scope.currentTheme = $rootScope.theme.id;
-            if ($scope.currentTheme === 'light') {
-                var textElements = document.getElementsByName("situationalCardValue");
-                for (var i = 0; i < textElements.length; i++) {
-                    textElements[i].style.color = '#151515';
-                }
-            }
+
             fetchJsonData();
+                if ($scope.currentTheme === 'light') {
+                    var textElements = document.getElementsByName("situationalCardValue");
+                    for (var i = 0; i < textElements.length; i++) {
+                        textElements[i].style.color = '#151515';
+                    }
+                    // var card = document.getElementsByClassName('situationalCard')
+                    // card[0].setAttribute('style','background:linear-gradient(130.55deg, rgba(9, 51, 175, 0.08) 0%, rgba(27, 202, 214, 0.03) 100%);');
+                }
         }
 
         function fetchJsonData() {

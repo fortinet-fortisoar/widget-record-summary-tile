@@ -8,7 +8,7 @@
     <div data-ng-hide="collapsed">
         <div id="situationalCard-{{config.wid}}"  class="padding-left-lg padding-bottom-lg">
             <div data-ng-if="sizeType == 'large'">
-                <div class="situationalCard">
+                <div id="situationalCard1-{{config.wid}}" class="situationalCard" data-ng-class="{ 'situationalCardLight' : currentTheme === 'light' }">
                     <div class="situationalCardInnerDiv">
                     </div>
                     <div id="situationalCardTitle" class="situationalCardTitle padding-bottom-0">
@@ -27,11 +27,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div data-ng-if="sizeType == 'small'">
-                <div class="situationalCard">
+                <div id="situationalCard1-{{config.wid}}"  class="situationalCard" data-ng-class="{ 'situationalCardLight' : currentTheme === 'light' }">
                     <div class="situationalCardInnerDiv">
                         <div id="situationalCardTitle" class="situationalCardTitle padding-botton-20">
                             {{widgetData.title}}

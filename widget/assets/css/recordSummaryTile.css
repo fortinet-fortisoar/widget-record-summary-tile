@@ -2,9 +2,13 @@
     box-sizing: border-box;
     width: 98%;
     height: 165px;
-    background: linear-gradient(130.55deg, rgba(9, 51, 175, 0.08) 0%, rgba(27, 202, 214, 0.03) 100%);
+    background: #131922;
     border: 1px solid #18C0CB;
     backdrop-filter: blur(25px);
+}
+
+.situationalCardLight{
+    background: linear-gradient(130.55deg, rgba(9, 51, 175, 0.08) 0%, rgba(27, 202, 214, 0.03) 100%); 
 }
 
 .situationalCardInnerDiv::before,
@@ -82,7 +86,7 @@
     font-size: 19px;
 }
 .largeBoxValue{
-    font-weight: 600;
+    font-weight: 400;
     font-size: 22px;
     color: #DEE9EC;
     text-align: center;
