@@ -10,10 +10,11 @@
 
         $scope.widgetData = {};
         $scope.sizeType = '';
-        init();
         $scope.filterValidation = false;
         var recordNotFound = "Record not found";
         var incorrectJson = "Incorrect Json";
+
+        init();
 
         function init() {
             $scope.currentTheme = $rootScope.theme.id;
@@ -24,8 +25,6 @@
                     for (var i = 0; i < textElements.length; i++) {
                         textElements[i].style.color = '#151515';
                     }
-                    // var card = document.getElementsByClassName('situationalCard')
-                    // card[0].setAttribute('style','background:linear-gradient(130.55deg, rgba(9, 51, 175, 0.08) 0%, rgba(27, 202, 214, 0.03) 100%);');
                 }
         }
 
