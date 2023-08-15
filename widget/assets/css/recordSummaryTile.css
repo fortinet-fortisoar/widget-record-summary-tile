@@ -1,0 +1,93 @@
+.situationalCard {
+    box-sizing: border-box;
+    width: 98%;
+    height: 165px;
+    background: #131922;
+    border: 1px solid #18C0CB;
+    backdrop-filter: blur(25px);
+}
+
+.situationalCardLight{
+    background: linear-gradient(130.55deg, rgba(9, 51, 175, 0.08) 0%, rgba(27, 202, 214, 0.03) 100%); 
+}
+
+.situationalCardInnerDiv::before,
+.situationalCardInnerDiv::after
+{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #18C0CB;
+    border-radius: 3px;
+}
+
+.situationalCardInnerDiv::before{
+    top: -3px;
+    right: -3px;
+    border-bottom: none;
+    border-left: none;
+}
+
+.situationalCardInnerDiv::after{
+    bottom: -3px;
+    left: -3px;
+    border-top: none;
+    border-right: none;
+}
+
+.situationalCard::before,
+.situationalCard::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #18C0CB;
+    border-radius: 3px;
+}
+
+.situationalCard::before {
+    top: -3px;
+    left: -3px;
+    border-bottom: none;
+    border-right: none;
+}
+
+.situationalCard::after {
+    bottom: -3px;
+    right: -3px;
+    border-top: none;
+    border-left: none;
+}
+
+.situationalCardTitle{
+    color: #3DAFC8;
+    font-size: 22px;
+    padding: 20px;
+    padding-bottom: 15px;
+}
+
+.situationalCardValue{
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 20px;
+    color: #DEE9EC;
+}
+
+.situationalCardSmallValue{
+    font-size: 30px;
+    font-weight: 400;
+    padding-left: 20px;
+    color: #DEE9EC;
+}
+
+.largeBoxKey{
+    color: #3DAFC8;
+    font-size: 19px;
+}
+.largeBoxValue{
+    font-weight: 400;
+    font-size: 22px;
+    color: #DEE9EC;
+    text-align: center;
+}

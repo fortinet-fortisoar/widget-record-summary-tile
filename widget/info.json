@@ -1,0 +1,17 @@
+{
+    "name": "recordSummaryTile",
+    "title": "Record Summary Tile",
+    "subTitle": "Widget lists, number of customers and Alerts",
+    "version": "1.0.0",
+    "metadata": {
+        "description": "",
+        "pages": [
+            "Dashboard"
+        ],
+        "certified": "No",
+        "publisher": "Fortinet",
+        "compatibility": [
+            "7.3.1"
+        ]
+    }
+}
