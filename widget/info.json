@@ -6,7 +6,7 @@
     "help_online": "https://github.com/fortinet-fortisoar/widget-record-summary-tile/blob/release/1.0.0/README.md",
     "published_date": 1692194643,
     "metadata": {
-        "description": "To use this widget users needs to provide a JSON in a certain format for the widget to render data. This JSON data must be in a field of a record in a module.",
+        "description": "This widget displays data in a card-tile, if data is provided in the required format.",
         "pages": [
             "Dashboard"
         ],
