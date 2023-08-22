@@ -3,12 +3,16 @@
     "title": "Record Summary Tile",
     "subTitle": "Widget lists, number of customers and Alerts",
     "version": "1.0.0",
-    "help_online": "https://github.com/fortinet-fortisoar/widget-record-summary-tile/blob/release/1.0.0/README.md",
     "published_date": 1692194643,
     "metadata": {
+        "help_online": "https://github.com/fortinet-fortisoar/widget-record-summary-tile/blob/release/1.0.0/README.md",
         "description": "This widget displays data in a card-tile, if data is provided in the required format.",
         "pages": [
             "Dashboard"
+        ],
+        "snapshots": [
+            "https://repo.fortisoar.fortinet.com/fsr-widgets/recordSummaryTile-1.0.0/images/small_tile.png",
+            "https://repo.fortisoar.fortinet.com/fsr-widgets/recordSummaryTile-1.0.0/images/large_tile.png"
         ],
         "certified": "No",
         "publisher": "Fortinet",
