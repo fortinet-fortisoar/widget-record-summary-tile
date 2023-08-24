@@ -3,63 +3,106 @@
 
 # Usage
 To use this widget users needs to provide a JSON in a certain format for the widget to render data.
-This JSON data must be in a field of a record in a module.
 
+This JSON data must be in a module's record that has a field of type JSON.
 
-## Widget Preview and How to Use
-This can display data in 2 forms based on JSON provided:
+<table>
+    <td><strong>IMPORTANT</strong></td>
+    <td>The <code>JSON</code> data to be rendered must have <strong><em>at least one</em></strong> of the following:
+        <ul>
+            <li><code>data</code> key</li>
+            <li><code>title</code> and <code>value</code> keys</li>
+        </ul>
+    </td>
+</table>
 
-1. Where 'data' key is present inside the JSON provided
+Following are two acceptable JSON formats:
 
-    Edit View ![Edit View](./res/edit_view.png)
+<table>
+    <thead>
+        <th>With <code>data</code> Key</th>
+        <th>Without <code>data</code> Key</th>
+    </thead>
+    <tr>
+        <td>
+<pre>"recordTilesCustomerData": {
+                "data": {
+                "Gold": 4000,
+                "Diamond": 5000,
+                "Platinum": 3000
+                },
+                "title": "Total Customers",
+                "value": "12,000"
+            }</pre>
+        </td>
+        <td>
+            <pre>"recordTilesCustomerData": {
+    "title": "Total Customers",
+    "value": "12,000"
+            }</pre>
+        </td>
+    </tr>
+</table>
 
-    In the field, "Enter the key of object to be rendered" contains the main key of the object "recordTilesCustomerData", if there is no key for the object leave the field blank.
-      In this example the JSON has a key "data", "title" and value.
-  
-      "data" -  All the key, value pairs present in it would be rendered in the bottom section of the widget, 
-      
-      "title" - Value in this key would be the title for the Tile
-      
-      "value" - value present in this key would display the number/text present in the key below the Title
+## Record Summary Tile
 
-      Record Summary Tile
-      ![Record Summary Tile](./res/large_tile.png)
+1. Edit a *Dashboard*'s view template and select **Add Widget** button.
 
-    JSON, edit view and widget tile, when looked at simultaniously gives a clearer picture
+2. Select **Record Summary Tile** from the list to bring up the **Record Summary Tile** widget's edit view.
 
-    JSON Object which contains the data to be rendered:
-    ```JSON
-        "recordTilesCustomerData": {
-          "data": {
-            "Gold": 4000,
-            "Diamond": 5000,
-            "Platinum": 3000
-          },
-          "title": "Total Customers",
-          "value": "12,000"
-        }
-    ```
+3. Specify the title of the visual depiction of each record node in the group in the **Title** field.
 
+    ![Edit View](./res/edit_view.png)
 
-2. Where 'data' key is not present inside the JSON provided
-    
-    Edit View ![Edit View](./res/edit_view.png)
-    
-    In the field, "Enter the key of object to be rendered" contains the main key of the object "recordTilesROI", if there is no key for the object leave the field blank.
-    JSON Object which contains the data to be rendered:
-    ```JSON
-        "recordTilesROI": {
-          "title": "Overall Automation ROI",
-          "value": "$113,122"
-        }
-    ```
-    In this example the JSON has a key "title" and value, but no "data" key.
-    So the tile will be displayed:
-    
-    Record Tile ![Tile](./res/small_tile.png)
+4. Select the module, whose records are to be displayed, in the **Select Data Source** field. The drop-down lists only those modules that support JSON data fields. For details on editing and creating modules, refer to the *Module Editor* section of the FortiSOAR *Administration Guide*, [here](https://docs.fortinet.com/document/fortisoar/7.4.1/administration-guide/97786/application-editor#Module_Editor).
 
+5. Define the filter criteria using which to filter the data to be rendered by this widget.
 
+    <table>
+        <thead>
+            <th>Example</th>
+        </thead>
+        <tbody>
+            <td>Filters can be applied for tasks like displaying the widget with only those asset records that meet the following criteria:
+                <ul>
+                    <li>IDs are not <code>null</code></li>
+                    <li>State is <em>Active</em></li>
+                </ul>
+            </td>
+        </tbody>
+    </table>
 
+6. Select the field, whose data is to be displayed, in the **Select Field** field. The drop-down lists fields of type `JSON`. For details on editing and creating fields, refer to the *Module Editor* section of the FortiSOAR *Administration Guide*, [here](https://docs.fortinet.com/document/fortisoar/7.4.1/administration-guide/97786/application-editor#Module_Editor).
+
+7. Specify the JSON `key` whose `value` is to be rendered in the **Object key to render** field.
+
+<table>
+    <thead>
+        <th>Example</th>
+    </thead>
+    <tbody>
+        <td>Consider the following JSON data in one of the record's JSON field:
+            <pre>"recordTilesCustomerData": {
+                "data": {
+                "Gold": 4000,
+                "Diamond": 5000,
+                "Platinum": 3000
+                },
+                "title": "Total Customers",
+                "value": "12,000"
+            }</pre>
+            <p>The following screenshot shows the Record Summary Tile in action with this JSON data.</p>
+            <p><img src="./res/large_tile.png" alt="Record Summary Tile"></p>
+            <p>Consider the following JSON data in one of the record's JSON field:</p>
+            <pre>"recordTilesCustomerData": {
+                "title": "Total Customers",
+                "value": "12,000"
+            }</pre>
+            <p>The following screenshot shows the Record Summary Tile in action with this JSON data.</p>
+            <p><img src="./res/small_tile.png" alt="Record Summary Tile"></p>
+        </td>
+    </tbody>
+</table>
 
 | [Installation](./setup.md#installation) | [Configuration](./setup.md#configuration) |
 |-----------------------------------------|-------------------------------------------|
