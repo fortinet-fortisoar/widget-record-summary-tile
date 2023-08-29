@@ -1,12 +1,12 @@
 {
     "name": "recordSummaryTile",
     "title": "Record Summary Tile",
-    "subTitle": "Widget lists, number of customers and Alerts",
+    "subTitle": "The Record Summary Tile widget takes JSON data from a FortiSOAR module record and presents it in a user-friendly format within a tile, simplifying data comprehension and visualization.",
     "version": "1.0.0",
     "published_date": 1692194643,
     "metadata": {
         "help_online": "https://github.com/fortinet-fortisoar/widget-record-summary-tile/blob/release/1.0.0/README.md",
-        "description": "This widget displays data in a card-tile, if data is provided in the required format.",
+        "description": "The Record Summary widget extracts JSON data from your FortiSOAR™ module records and presents it in a tile format. Complex information is distilled into a glanceable summary, making it easy to understand and act upon.",
         "pages": [
             "Dashboard"
         ],
