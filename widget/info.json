@@ -1,7 +1,7 @@
 {
     "name": "recordSummaryTile",
     "title": "Record Summary Tile",
-    "subTitle": "Provide data in JSON format and a tile widget is created for the provided data.",
+    "subTitle": "The Record Summary widget extracts JSON data from your FortiSOAR™ module records and presents it in a convenient tile format.",
     "version": "1.0.0",
     "published_date": 1692194643,
     "metadata": {
