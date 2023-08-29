@@ -1,7 +1,7 @@
 {
     "name": "recordSummaryTile",
     "title": "Record Summary Tile",
-    "subTitle": "The Record Summary widget extracts JSON data from your FortiSOAR module records and presents it in a tile format.",
+    "subTitle": "The Record Summary Tile widget takes JSON data from a FortiSOAR module record and presents it in a user-friendly format within a tile, simplifying data comprehension and visualization.",
     "version": "1.0.0",
     "published_date": 1692194643,
     "metadata": {
