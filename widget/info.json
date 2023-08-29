@@ -6,7 +6,7 @@
     "published_date": 1692194643,
     "metadata": {
         "help_online": "https://github.com/fortinet-fortisoar/widget-record-summary-tile/blob/release/1.0.0/README.md",
-        "description": "The Record Summary widget extracts JSON data from your FortiSOAR™ module records and presents it in a convenient tile format. Complex information is distilled into a glanceable summary, making it easy to understand and act upon.",
+        "description": "The Record Summary widget extracts JSON data from your FortiSOAR™ module records and presents it in a tile format. Complex information is distilled into a glanceable summary, making it easy to understand and act upon.",
         "pages": [
             "Dashboard"
         ],
