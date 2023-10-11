@@ -12,7 +12,8 @@
         $scope.sizeType = '';
         $scope.filterValidation = false;
         var recordNotFound = "Record not found";
-        var incorrectJson = "Incorrect Json";
+        var incorrectJson = "Incorrect JSON";
+        var incorrectFormat = "Incorrect Format";
 
         init();
 
@@ -47,14 +48,21 @@
                     })
                 }
                 if(data){
-                    $scope.widgetData = data;
-                    //If data is found use large class
-                    if ($scope.widgetData.hasOwnProperty('data')) {
-                        $scope.sizeType = 'large';
+                    if (typeof data === 'object' && data.hasOwnProperty('title')) {
+                        $scope.widgetData = data;
+                        //If data is found use large class
+                        if ($scope.widgetData.hasOwnProperty('data')) {
+                            $scope.sizeType = 'large';
+                        }
+                        else {
+                            $scope.sizeType = 'small';
+                        }
                     }
-                    else {
-                        $scope.sizeType = 'small';
+                    else{
+                        $scope.filterValidation = true;
+                        $scope.errorMessage =  incorrectFormat;
                     }
+
                 }
                 else{
                     $scope.filterValidation = true;
